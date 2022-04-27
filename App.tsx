@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import HomeStack from "./navigation/HomeStack";
+import Profil from "./ecrans/Lexique";
+import BottomTab from "./navigation/BottomTab";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <BottomTab />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "rgba(254, 255, 237, 1)",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
